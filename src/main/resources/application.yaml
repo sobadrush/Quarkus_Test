@@ -1,0 +1,6 @@
+# Quarkus 應用程式配置
+quarkus:
+  application:
+    name: quarkus-helloworld
+    version: 1.0.0-SNAPSHOT
+
