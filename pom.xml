@@ -41,6 +41,12 @@
       <artifactId>quarkus-resteasy-reactive</artifactId>
     </dependency>
 
+    <!-- Quarkus Config YAML - 提供 YAML 配置檔案支援，讓應用程式可以更靈活地配置 -->
+    <dependency>
+        <groupId>io.quarkus</groupId>
+        <artifactId>quarkus-config-yaml</artifactId>
+    </dependency>
+
     <!-- Quarkus Arc - Quarkus 的依賴注入容器，提供 CDI (Contexts and Dependency Injection) 功能 -->
     <dependency>
       <groupId>io.quarkus</groupId>

@@ -1,6 +1,23 @@
 # Quarkus 應用程式配置
+#   - application.yaml 會被 Quarkus 讀取。雖然格式看起來像 Spring Boot，但這是標準配置檔案格式，Quarkus 也支援。
+#   - Quarkus 配置檔案支援
+#   - Quarkus 支援兩種配置檔案格式：
+#     - application.properties（預設）
+#     - application.yaml（需要額外依賴，quarkus-config-yaml）
+
 quarkus:
   application:
     name: quarkus-helloworld
     version: 1.0.0-SNAPSHOT
 
+  # HTTP 服務器配置
+  http:
+    host: 0.0.0.0 # 監聽地址
+    port: 8081 # 監聽端口
+    read-timeout: 10000 # 讀取超時時間
+    write-timeout: 10000 # 寫入超時時間
+    body-handler-buffer-size: 8192 # 請求體緩衝區大小
+    cors: # CORS 配置
+      enabled: true
+      origins: "*"
+    root-path: /api  # 設置 context path，所有端點都會加上這個前綴
